@@ -54,11 +54,9 @@ label .row .circle {
   margin-right: 10px;
   border: 2px solid #ccc;
   border-radius: 50%;
-  transition: all 0.2s ease;
 }
 label.selected .row .circle {
   border-color: #6665ee;
-
 }
 .row .circle::after {
   content: "";
@@ -109,5 +107,8 @@ label.selected .progress::after {
   background: #6665ee;
 }
 label.selected :is(.percent, .progress) {
+  display: block;
+}
+label.selectall :is(.percent, .progress) {
   display: block;
 }
