@@ -60,8 +60,35 @@ label .row .circle {
   top: 2px;
   left: 2px;
   border-radius: inherit;
+  display: none;
+}
+label:hover .row .circle::after  {
+  display: block;
+  background: #e6e6e6;
+
 }
 label .row span {
   font-size: 16px;
   font-weight: 500;
+}
+label .row .percent {
+  display: none;
+
+}
+label .progress {
+  height: 7px;
+  width: 100%;
+  position: relative;
+  margin: 8px 0 3px 0;
+  background: #f0f0f0;
+  border-radius: 30px;
+  display: none;
+}
+label .progress::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: calc(1% * var(--w));
+  background: #ccc;
+  border-radius: inherit;
 }
