@@ -52,5 +52,14 @@
       </label>
     </div>
   </div>
+  <script>
+    const options = document.querySelectorAll("label");
+    for (let i = 0; i < options.length; i++) {
+      options[i].addEventListener("click", () => {
+        options[i].classList.add("selected");
+        console.log(options[i])
+      })
+    }
+  </script>
 </body>
 </html>

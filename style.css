@@ -30,8 +30,12 @@ body{
   display: block;
   border-radius: 5px;
   margin-bottom: 10px;
-  border: 2px solid #e6e6e6;
   padding: 8px 15px;
+  border: 2px solid #e6e6e6;
+  transition: all 0.2s ease;
+}
+label.selected {
+  border-color: #6665ee;
 }
 label .row {
   display: flex;
@@ -50,6 +54,11 @@ label .row .circle {
   margin-right: 10px;
   border: 2px solid #ccc;
   border-radius: 50%;
+  transition: all 0.2s ease;
+}
+label.selected .row .circle {
+  border-color: #6665ee;
+
 }
 .row .circle::after {
   content: "";
@@ -61,6 +70,10 @@ label .row .circle {
   left: 2px;
   border-radius: inherit;
   display: none;
+}
+label.selected .row .circle::after {
+  display: block;
+  background: #6665ee!important;
 }
 label:hover .row .circle::after  {
   display: block;
@@ -91,4 +104,10 @@ label .progress::after {
   width: calc(1% * var(--w));
   background: #ccc;
   border-radius: inherit;
+}
+label.selected .progress::after {
+  background: #6665ee;
+}
+label.selected :is(.percent, .progress) {
+  display: block;
 }
